@@ -3,9 +3,9 @@ interface Props {
   technology: string;
 }
 
-export const GreetingCard = (props: Props) => (
+export const GreetingCard = ({ name, technology }: Props) => (
   <div>
-    <h1>Hello there, my name is {props.name}.</h1>
-    <p>And this is our {props.technology} application ⚛️</p>
+    <h1>Hello there, my name is {name}.</h1>
+    <p>And this is our {technology} application ⚛️</p>
   </div>
 );

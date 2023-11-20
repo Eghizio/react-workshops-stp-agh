@@ -10,10 +10,10 @@ interface Props {
   enjoyers: Enjoyer[];
 }
 
-export const TechnologyEnjoyers = (props: Props) => (
+export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <React.Fragment>
-    {props.enjoyers.map((enjoyer) => (
-      <GreetingCard name={enjoyer.name} technology={enjoyer.technology} />
+    {enjoyers.map(({ name, technology }) => (
+      <GreetingCard name={name} technology={technology} />
     ))}
   </React.Fragment>
 );
