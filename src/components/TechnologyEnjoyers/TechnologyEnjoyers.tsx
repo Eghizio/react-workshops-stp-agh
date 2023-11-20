@@ -1,4 +1,3 @@
-import React from "react";
 import { GreetingCard } from "../GreetingCard/GreetingCard";
 import { Student } from "../../model";
 
@@ -7,9 +6,11 @@ interface Props {
 }
 
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
-  <React.Fragment>
+  <>
     {enjoyers.map((enjoyer) => (
-      <GreetingCard key={enjoyer.name} student={enjoyer} />
+      <div style={{ margin: "10px" }}>
+        <GreetingCard key={enjoyer.name} student={enjoyer} />
+      </div>
     ))}
-  </React.Fragment>
+  </>
 );
