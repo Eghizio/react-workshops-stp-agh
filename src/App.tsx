@@ -1,10 +1,11 @@
 import { GreetingCard } from "./components/GreetingCard/GreetingCard";
 
+const names = ["Kuba", "Piotrek", "Tomasz", "Stefan", "Ada", "Magda", "Zuza"];
+
 export const App = () => (
   <main>
-    <GreetingCard name="Kuba" />
-    <GreetingCard name="Piotrek" />
-    <GreetingCard name="Tomasz" />
-    <GreetingCard name="Stefan" />
+    {names.map((name) => (
+      <GreetingCard name={name} />
+    ))}
   </main>
 );
