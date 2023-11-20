@@ -13,7 +13,7 @@ interface Props {
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <React.Fragment>
     {enjoyers.map(({ name, technology }) => (
-      <GreetingCard name={name} technology={technology} />
+      <GreetingCard key={name} name={name} technology={technology} />
     ))}
   </React.Fragment>
 );
