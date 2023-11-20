@@ -1,11 +1,17 @@
-import { GreetingCard } from "./components/GreetingCard/GreetingCard";
+import { TechnologyEnjoyers } from "./components/TechnologyEnjoyers/TechnologyEnjoyers";
 
-const names = ["Kuba", "Piotrek", "Tomasz", "Stefan", "Ada", "Magda", "Zuza"];
+const students = [
+  { name: "Kuba", technology: "React" },
+  { name: "Piotrek", technology: "React" },
+  { name: "Tomasz", technology: "Angular" },
+  { name: "Stefan", technology: "Angular" },
+  { name: "Ada", technology: "React" },
+  { name: "Magda", technology: "React" },
+  { name: "Zuza", technology: "Angular" },
+];
 
 export const App = () => (
   <main>
-    {names.map((name) => (
-      <GreetingCard name={name} />
-    ))}
+    <TechnologyEnjoyers enjoyers={students} />
   </main>
 );
