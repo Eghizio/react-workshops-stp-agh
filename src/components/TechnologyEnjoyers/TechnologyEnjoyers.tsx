@@ -8,8 +8,8 @@ interface Props {
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <>
     {enjoyers.map((enjoyer) => (
-      <div style={{ margin: "10px" }}>
-        <GreetingCard key={enjoyer.name} student={enjoyer} />
+      <div key={enjoyer.name} style={{ margin: "10px" }}>
+        <GreetingCard student={enjoyer} />
       </div>
     ))}
   </>
