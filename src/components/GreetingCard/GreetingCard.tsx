@@ -7,6 +7,8 @@ interface Props {
 export const GreetingCard = ({ student: { name, technology } }: Props) => (
   <div>
     <h1>Hello there, my name is {name}.</h1>
-    <p>And this is our {technology} application ⚛️</p>
+    <p>
+      And this is our {technology} application {technology === "React" && "⚛️"}
+    </p>
   </div>
 );
