@@ -4,5 +4,7 @@ export const App = () => (
   <main>
     <GreetingCard name="Kuba" />
     <GreetingCard name="Piotrek" />
+    <GreetingCard name="Tomasz" />
+    <GreetingCard name="Stefan" />
   </main>
 );
