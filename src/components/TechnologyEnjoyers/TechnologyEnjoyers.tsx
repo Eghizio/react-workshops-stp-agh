@@ -1,19 +1,15 @@
 import React from "react";
 import { GreetingCard } from "../GreetingCard/GreetingCard";
-
-interface Enjoyer {
-  name: string;
-  technology: string;
-}
+import { Student } from "../../model";
 
 interface Props {
-  enjoyers: Enjoyer[];
+  enjoyers: Student[];
 }
 
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <React.Fragment>
-    {enjoyers.map(({ name, technology }) => (
-      <GreetingCard key={name} name={name} technology={technology} />
+    {enjoyers.map((enjoyer) => (
+      <GreetingCard key={enjoyer.name} student={enjoyer} />
     ))}
   </React.Fragment>
 );

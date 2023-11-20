@@ -1,9 +1,10 @@
+import { Student } from "../../model";
+
 interface Props {
-  name: string;
-  technology: string;
+  student: Student;
 }
 
-export const GreetingCard = ({ name, technology }: Props) => (
+export const GreetingCard = ({ student: { name, technology } }: Props) => (
   <div>
     <h1>Hello there, my name is {name}.</h1>
     <p>And this is our {technology} application ⚛️</p>

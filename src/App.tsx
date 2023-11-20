@@ -1,6 +1,7 @@
 import { TechnologyEnjoyers } from "./components/TechnologyEnjoyers/TechnologyEnjoyers";
+import { Student } from "./model";
 
-const students = [
+const students: Student[] = [
   { name: "Kuba", technology: "React" },
   { name: "Piotrek", technology: "React" },
   { name: "Tomasz", technology: "Angular" },
