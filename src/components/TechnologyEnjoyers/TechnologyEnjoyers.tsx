@@ -8,9 +8,11 @@ interface Props {
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <>
     {enjoyers.map((enjoyer) => (
-      <div key={enjoyer.name} className="m-2.5">
+      <div key={enjoyer.name}>
         <GreetingCard student={enjoyer} />
       </div>
     ))}
   </>
 );
+
+// m-2.5
