@@ -1,6 +1,5 @@
 import { GreetingCard } from "../GreetingCard/GreetingCard";
 import { Student } from "../../model";
-import { style } from "./style";
 
 interface Props {
   enjoyers: Student[];
@@ -9,7 +8,7 @@ interface Props {
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <>
     {enjoyers.map((enjoyer) => (
-      <div key={enjoyer.name} style={style.spacer}>
+      <div key={enjoyer.name} className="spacer">
         <GreetingCard student={enjoyer} />
       </div>
     ))}

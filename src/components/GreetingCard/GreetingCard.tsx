@@ -1,5 +1,4 @@
 import { Student } from "../../model";
-import { style } from "./style";
 
 interface Props {
   student: Student;
@@ -11,7 +10,7 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
   };
 
   return (
-    <div style={style.card}>
+    <div className="card">
       <h1>Hello there, my name is {name}.</h1>
       <p>
         And this is our {technology} application{" "}
