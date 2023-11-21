@@ -7,6 +7,8 @@ interface Props {
 }
 
 export const GreetingCard = ({ student: { name, technology } }: Props) => {
+  const isReact = technology === "React";
+
   const greet = () => {
     alert(`Hello there, ${name} 👋`);
   };
@@ -15,8 +17,7 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
     <div className="p-1 border border-solid border-red-600">
       <Heading>Hello there, my name is {name}.</Heading>
       <p>
-        And this is our {technology} application{" "}
-        {technology === "React" && "⚛️"}
+        And this is our {technology} application {isReact && "⚛️"}
       </p>
       <Button onClick={greet} startDecorator={"🧡"}>
         Greet {name}
