@@ -9,10 +9,6 @@ interface Props {
 export const GreetingCard = ({ student: { name, technology } }: Props) => {
   const isReact = technology === "React";
 
-  const greet = () => {
-    alert(`Hello there, ${name} 👋`);
-  };
-
   return (
     <div className="p-1 border border-solid border-red-600">
       <Heading>Hello there, my name is {name}.</Heading>
@@ -20,7 +16,10 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
         And this is our <Tech $isReact={isReact}>{technology}</Tech> application{" "}
         {isReact && "⚛️"}
       </p>
-      <Button onClick={greet} startDecorator={"🧡"}>
+      <Button
+        onClick={() => alert(`Hello there, ${name} 👋`)}
+        startDecorator={"🧡"}
+      >
         Greet {name}
       </Button>
     </div>
