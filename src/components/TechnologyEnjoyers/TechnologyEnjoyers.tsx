@@ -1,5 +1,6 @@
 import { GreetingCard } from "../GreetingCard/GreetingCard";
 import { Student } from "../../model";
+import "./style.css";
 
 interface Props {
   enjoyers: Student[];

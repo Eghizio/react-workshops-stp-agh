@@ -1,4 +1,5 @@
 import { Student } from "../../model";
+import "./style.css";
 
 interface Props {
   student: Student;
