@@ -17,7 +17,8 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
     <div className="p-1 border border-solid border-red-600">
       <Heading>Hello there, my name is {name}.</Heading>
       <p>
-        And this is our {technology} application {isReact && "⚛️"}
+        And this is our <Tech $isReact={isReact}>{technology}</Tech> application{" "}
+        {isReact && "⚛️"}
       </p>
       <Button onClick={greet} startDecorator={"🧡"}>
         Greet {name}
@@ -29,4 +30,12 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
 const Heading = styled.h1`
   font-size: xx-large;
   font-weight: bold;
+`;
+
+interface TechProps {
+  $isReact: boolean;
+}
+
+const Tech = styled.span<TechProps>`
+  color: ${(props) => (props.$isReact ? "dodgerblue" : "crimson")};
 `;
