@@ -1,4 +1,5 @@
 import { Student } from "../../model";
+import { style } from "./style";
 
 interface Props {
   student: Student;
@@ -19,11 +20,4 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
       <button onClick={greet}>Greet {name}</button>
     </div>
   );
-};
-
-const style = {
-  card: {
-    border: "1px solid red",
-    padding: "5px",
-  },
 };

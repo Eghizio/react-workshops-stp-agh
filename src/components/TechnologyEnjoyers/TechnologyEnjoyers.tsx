@@ -1,5 +1,6 @@
 import { GreetingCard } from "../GreetingCard/GreetingCard";
 import { Student } from "../../model";
+import { style } from "./style";
 
 interface Props {
   enjoyers: Student[];
@@ -14,9 +15,3 @@ export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
     ))}
   </>
 );
-
-const style = {
-  spacer: {
-    margin: "10px",
-  },
-};
