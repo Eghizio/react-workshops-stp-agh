@@ -8,9 +8,15 @@ interface Props {
 export const TechnologyEnjoyers = ({ enjoyers }: Props) => (
   <>
     {enjoyers.map((enjoyer) => (
-      <div key={enjoyer.name} style={{ margin: "10px" }}>
+      <div key={enjoyer.name} style={style.spacer}>
         <GreetingCard student={enjoyer} />
       </div>
     ))}
   </>
 );
+
+const style = {
+  spacer: {
+    margin: "10px",
+  },
+};
