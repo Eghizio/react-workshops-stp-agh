@@ -1,5 +1,4 @@
 import { Student } from "../../model";
-import "./style.css";
 
 interface Props {
   student: Student;
@@ -11,13 +10,18 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
   };
 
   return (
-    <div className="card spacer">
-      <h1>Hello there, my name is {name}.</h1>
+    <div className="p-1 border border-solid border-red-600">
+      <h1 className="text-2xl font-bold">Hello there, my name is {name}.</h1>
       <p>
         And this is our {technology} application{" "}
         {technology === "React" && "⚛️"}
       </p>
-      <button onClick={greet}>Greet {name}</button>
+      <button
+        className="p-1 bg-gray-400 border border-solid border-black rounded hover:bg-gray-300"
+        onClick={greet}
+      >
+        Greet {name}
+      </button>
     </div>
   );
 };
