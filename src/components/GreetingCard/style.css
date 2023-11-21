@@ -2,3 +2,7 @@
   border: 1px solid red;
   padding: 5px;
 }
+
+.spacer {
+  margin: 100px; /* Doesn't work */
+}

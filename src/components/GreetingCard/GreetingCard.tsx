@@ -11,7 +11,7 @@ export const GreetingCard = ({ student: { name, technology } }: Props) => {
   };
 
   return (
-    <div className="card">
+    <div className="card spacer">
       <h1>Hello there, my name is {name}.</h1>
       <p>
         And this is our {technology} application{" "}
