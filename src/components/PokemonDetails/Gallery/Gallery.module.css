@@ -1,0 +1,15 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.arrowBtn {
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.img {
+  width: 600px;
+  height: 600px;
+}

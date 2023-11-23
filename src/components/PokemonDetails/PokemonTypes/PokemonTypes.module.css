@@ -1,0 +1,49 @@
+.types {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-size: small;
+  /* font-weight: bold; */
+  background-color: lightgray;
+  color: black;
+}
+
+.pill.normal {
+  background-color: lightgray;
+  color: black;
+}
+
+.pill.grass {
+  background-color: limegreen;
+}
+
+.pill.fire {
+  background-color: crimson;
+  color: white;
+}
+
+.pill.water {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pill.poison {
+  background-color: purple;
+  color: white;
+}
+
+.pill.bug {
+  background-color: green;
+  color: white;
+}
+
+.pill.flying {
+  background-color: lightblue;
+  color: black;
+}
