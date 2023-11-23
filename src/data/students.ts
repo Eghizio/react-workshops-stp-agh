@@ -1,4 +1,4 @@
-import { Student } from "./model";
+import type { Student } from "../model/students";
 
 export const students: Student[] = [
   { name: "Kuba", technology: "React" },

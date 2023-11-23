@@ -1,0 +1,31 @@
+.header {
+  padding: 0.5rem 4rem;
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  transition: 300ms;
+  animation: 3s linear 200ms infinite running spin;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
