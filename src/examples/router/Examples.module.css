@@ -1,0 +1,13 @@
+.layout {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav {
+  width: 200px;
+  height: 100vh;
+  border-right: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
