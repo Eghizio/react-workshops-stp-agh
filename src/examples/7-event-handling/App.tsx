@@ -1,15 +1,22 @@
-const data = [
-  { name: "Kuba", url: "https://picsum.photos/id/237/200/200" },
-  { name: "Piotrek", url: "https://picsum.photos/id/137/200/200" },
-  { name: "Emilia", url: "https://picsum.photos/id/42/200/200" },
-  { name: "Natalia", url: "https://picsum.photos/id/1/200/200" },
-  { name: "Tomasz", url: "https://picsum.photos/id/69/200/200" },
-];
-
 export const App = () => {
+  const doSomething = (name: string) => {
+    const message = `Hello ${name}!`;
+
+    if (Math.random() > 0.5) {
+      console.log(message);
+    } else {
+      alert(message);
+    }
+  };
+
   return (
     <div>
-      <button>Pointless Button</button>
+      <button onClick={() => doSomething("Maciek")}>Pointless Button</button>
+
+      <input
+        type="text"
+        onChange={(event) => console.log(event.target.value)}
+      />
     </div>
   );
 };

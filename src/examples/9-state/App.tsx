@@ -1,12 +1,36 @@
-const data = [
-  { name: "Kuba", url: "https://picsum.photos/id/237/200/200" },
-  { name: "Piotrek", url: "https://picsum.photos/id/137/200/200" },
-  { name: "Emilia", url: "https://picsum.photos/id/42/200/200" },
-  { name: "Natalia", url: "https://picsum.photos/id/1/200/200" },
-  { name: "Tomasz", url: "https://picsum.photos/id/69/200/200" },
-];
+import { useState } from "react";
 
-// counter
+interface Props {
+  step?: number;
+  count: number;
+  updateCounter: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const Counter = ({ step = 1, count, updateCounter }: Props) => {
+  console.log({ step });
+
+  const increment = () => updateCounter((prev) => prev + step);
+
+  const decrement = () => updateCounter((prev) => prev - step);
+
+  return (
+    <div>
+      <button onClick={increment}>Increment</button>
+      <span>{count}</span>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+// Zadanie dodatkowe: Button który zresetuje Counter do zera.
 export const App = () => {
-  return <div>Template</div>;
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <Counter step={2} count={count} updateCounter={setCount} />
+      <br />
+      <Counter step={8} count={count} updateCounter={setCount} />
+    </>
+  );
 };

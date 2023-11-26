@@ -1,11 +1,9 @@
-const data = [
-  { name: "Kuba", url: "https://picsum.photos/id/237/200/200" },
-  { name: "Piotrek", url: "https://picsum.photos/id/137/200/200" },
-  { name: "Emilia", url: "https://picsum.photos/id/42/200/200" },
-  { name: "Natalia", url: "https://picsum.photos/id/1/200/200" },
-  { name: "Tomasz", url: "https://picsum.photos/id/69/200/200" },
-];
-
-export const App = () => {
-  return <div>Template</div>;
-};
+export const App = () => (
+  <main>
+    <h2>Routing</h2>
+    <a href="https://reactrouter.com/en/main" about="_blank">
+      React Router documentation
+    </a>
+    <p>See `router` files in this project</p>
+  </main>
+);

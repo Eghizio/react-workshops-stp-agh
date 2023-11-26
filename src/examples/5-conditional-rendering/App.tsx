@@ -1,11 +1,42 @@
-const data = [
-  { name: "Kuba", url: "https://picsum.photos/id/237/200/200" },
-  { name: "Piotrek", url: "https://picsum.photos/id/137/200/200" },
-  { name: "Emilia", url: "https://picsum.photos/id/42/200/200" },
-  { name: "Natalia", url: "https://picsum.photos/id/1/200/200" },
-  { name: "Tomasz", url: "https://picsum.photos/id/69/200/200" },
+const users = [
+  {
+    name: "Kuba",
+    url: "https://picsum.photos/id/237/200/200",
+    isPremium: true,
+  },
+  {
+    name: "Tomasz",
+    url: "https://picsum.photos/id/69/200/200",
+    isPremium: false,
+  },
 ];
 
+interface Props {
+  name: string;
+  url: string;
+  isPremium: boolean;
+}
+
+const Greeting = ({ name, url, isPremium }: Props) => (
+  <>
+    <h1>Hello there, {name}!</h1>
+    {isPremium && <img src={url} alt={`${name} avatar`} />}
+  </>
+);
+
 export const App = () => {
-  return <div>Template</div>;
+  return (
+    <div>
+      <Greeting
+        name={users[0].name}
+        url={users[0].url}
+        isPremium={users[0].isPremium}
+      />
+      <Greeting
+        name={users[1].name}
+        url={users[1].url}
+        isPremium={users[1].isPremium}
+      />
+    </div>
+  );
 };

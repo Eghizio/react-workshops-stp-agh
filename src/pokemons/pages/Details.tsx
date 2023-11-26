@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { NotFound } from "./NotFound";
+import { NotFound } from "../../pages/NotFound";
 import { PokemonDetails } from "../components/PokemonDetails/PokemonDetails";
 
 export const Details = () => {

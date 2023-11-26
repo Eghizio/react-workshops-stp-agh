@@ -1,12 +1,39 @@
-const data = [
-  { name: "Kuba", url: "https://picsum.photos/id/237/200/200" },
-  { name: "Piotrek", url: "https://picsum.photos/id/137/200/200" },
-  { name: "Emilia", url: "https://picsum.photos/id/42/200/200" },
-  { name: "Natalia", url: "https://picsum.photos/id/1/200/200" },
-  { name: "Tomasz", url: "https://picsum.photos/id/69/200/200" },
-];
+import { useEffect, useState } from "react";
 
-// timedown + esc click to stop
+// Zadanie dodatkowe: Naciśnięcie klawisza "Space" stopuje/startuje licznik.
+// Wykorzystaj addEventListener. Pamiętaj o posprzątaniu ;)
+const Countdown = () => {
+  const [countdown, setCountdown] = useState(10);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountdown((c) => (c > 0 ? --c : 0));
+      console.log("1000ms has passed");
+    }, 1000);
+
+    // Cleanup function run on component unmounting.
+    return () => {
+      // Comment line below & notice what happens when unmounting the <Countdown /> component
+      clearInterval(interval);
+      console.log("Unmounting!");
+    };
+  }, []);
+
+  return <div>Time remaining: {countdown}</div>;
+};
+
 export const App = () => {
-  return <div>Template</div>;
+  const [isCountdownMounted, setIsCountdownMounted] = useState(true);
+
+  const btnText = isCountdownMounted ? "Unmount countdown" : "Mount countdown";
+
+  const toggle = () => setIsCountdownMounted((p) => !p);
+
+  return (
+    <main>
+      <button onClick={toggle}>{btnText}</button>
+
+      {isCountdownMounted && <Countdown />}
+    </main>
+  );
 };

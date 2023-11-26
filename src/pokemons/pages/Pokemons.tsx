@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { Card } from "../components/Card/Card";
-// import { Header } from "../components/Header/Header";
 import { List } from "../components/List/List";
 import { usePokemons } from "../hooks/usePokemons";
 

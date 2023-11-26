@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Pokemon, dtoToModel } from "../../model/pokemons";
-import { NotFound } from "../../pages/NotFound";
+import { NotFound } from "../../../pages/NotFound";
 import { getPokemon } from "../../api/pokemons";
 import { exampleDescription } from "../../data/description";
 import { PokemonTypes } from "./PokemonTypes/PokemonTypes";

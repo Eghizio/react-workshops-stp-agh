@@ -3,6 +3,13 @@
   background-color: gold;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -28,4 +35,8 @@
 .link {
   color: inherit;
   text-decoration: none;
+}
+
+.layout {
+  padding: 2rem;
 }

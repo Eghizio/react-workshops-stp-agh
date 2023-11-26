@@ -1,0 +1,26 @@
+.card {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 300ms ease-in-out;
+}
+
+.card:hover{
+  border-color: aqua;
+  transform: scale(1.05);
+}
+
+.name {
+  color: dodgerblue;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+}

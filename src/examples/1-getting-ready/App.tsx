@@ -1,5 +1,9 @@
+// http://localhost:5174
 export const App = () => (
-  <a href="http://localhost:5174/" target="_blank">
-    Vite example
+  <a
+    href="https://stackblitz.com/edit/vitejs-vite-g9vkxd?file=index.html&terminal=dev"
+    target="_blank"
+  >
+    Vite example - Initial Vite application using React + TypeScript.
   </a>
 );
