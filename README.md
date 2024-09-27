@@ -12,3 +12,5 @@ The app should (check the terminal output) run on: [http://localhost:5173](http:
 ## Authors
 
 Made by [Jakub Wąsik](https://www.linkedin.com/in/jacob-wasik/) & [Piotr Petrycki](https://www.linkedin.com/in/piotrpetrycki)
+
+# [🔗 Check out my other talks](https://github.com/Eghizio/talks)
